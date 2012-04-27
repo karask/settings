@@ -1,5 +1,7 @@
+"
 " get vim-ruby bundle first
 "git clone git://github.com/vim-ruby/vim-ruby.git ~/.vim/bundle/vim-ruby
+"
 
 autocmd FileType ruby compiler ruby
 
