@@ -1,37 +1,34 @@
-"
-" get vim-ruby bundle first
-"git clone git://github.com/vim-ruby/vim-ruby.git ~/.vim/bundle/vim-ruby
-"
 
-autocmd FileType ruby compiler ruby
-
-set nocompatible      " We're running Vim, not Vi!
-syntax on             " Enable syntax highlighting
-filetype on           " Enable filetype detection
-filetype indent on    " Enable filetype-specific indenting
-filetype plugin on    " Enable filetype-specific plugins
-
-:set tabstop=2        " number of spaces
-:set shiftwidth=2     " for indentation
-:set expandtab        " spaces instead of tab
-
-" < and > can be used to unindent and indent selections!
-
-:colorscheme desert256
-
-
-" auto complete with shift enter do and { blocks!
-if !exists( "*EndToken" )
-  function EndToken()
-    let current_line = getline( '.' )
-    let braces_at_end = '{\s*|\(,\|\s\|\w*|\s*\)\?$'
-    if match( current_line, braces_at_end ) >= 0
-      return '}'
-    else
-      return 'end'
-    endif
-  endfunction
+" Vim5 and later versions support syntax highlighting. Uncommenting the next
+" line enables syntax highlighting by default.
+if has("syntax")
+  syntax on
 endif
 
-imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
+" If using a dark background within the editing area and syntax highlighting
+" turn on this option as well
+set background=dark
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+"if has("autocmd")
+"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+"endif
+
+" Uncomment the following to have Vim load indentation rules and plugins
+" according to the detected filetype.
+"if has("autocmd")
+"  filetype plugin indent on
+"endif
+
+" The following are commented out as they cause vim to behave a lot
+" differently from regular Vi. They are highly recommended though.
+set showcmd            " Show (partial) command in status line.
+set showmatch          " Show matching brackets.
+"set ignorecase         " Do case insensitive matching
+"set smartcase          " Do smart case matching
+set incsearch          " Incremental search
+"set autowrite          " Automatically save before commands like :next and :make
+"set hidden             " Hide buffers when they are abandoned
+"set mouse=a            " Enable mouse usage (all modes)
 
