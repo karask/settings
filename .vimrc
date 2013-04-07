@@ -73,4 +73,5 @@ inoremap <leader>, <C-X><C-O>
 " .ru files are Ruby -- seems that it is not needed though...
 "au BufRead,BufNewFile *.ru setfiletype ruby
 
-
+" Disable automatic folding in vim-markdown
+let g:vim_markdown_folding_disabled=1

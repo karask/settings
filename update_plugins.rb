@@ -6,7 +6,8 @@ require 'open-uri'
 
 git_plugins = [
   "git://github.com/scrooloose/nerdtree.git",
-  "git://github.com/vim-ruby/vim-ruby.git"
+  "git://github.com/vim-ruby/vim-ruby.git",
+  "https://github.com/plasticboy/vim-markdown.git"
 ]
 
 
