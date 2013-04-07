@@ -6,7 +6,9 @@ set nocompatible            " use vim only
 execute pathogen#infect()
 
 " plugins to install:
-"" nerdtree
+"" use update_plugins.rb
+
+let mapleader=","
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
@@ -62,6 +64,7 @@ set cursorline         " Underlines line that cursor is on
 """"" Mappings
 
 map <F2> :NERDTreeToggle<CR>
+inoremap <leader>, <C-X><C-O>
 
 
 
