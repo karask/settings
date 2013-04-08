@@ -52,11 +52,11 @@ set number             " Show line numbers -- also :set nu and :set nonu to remo
 set expandtab          " Expands tabs into spaces
 set shiftwidth=2       " Tab length is now 3 characters
 set softtabstop=2      " change Tab size to 3
-set smartindent        " Indent as expected to programming -- keeps previous line indentation
+
+"set smartindent        " Indent as expected to programming -- keeps previous line indentation
 "set autoindent         " does smarter indentation based on filetype
 
 set cursorline         " Underlines line that cursor is on
-
 "set colorcolumn=80    " Show red vertical line in column 80
 
 
@@ -75,3 +75,5 @@ inoremap <leader>, <C-X><C-O>
 
 " Disable automatic folding in vim-markdown
 let g:vim_markdown_folding_disabled=1
+
+
