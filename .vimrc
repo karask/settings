@@ -67,6 +67,7 @@ map <F2> :NERDTreeToggle<CR>
 inoremap <leader>, <C-X><C-O>
 
 
+
 """"" NERDTree setting
 
 " open a NERDTree automatically when vim starts up
@@ -75,10 +76,14 @@ autocmd vimenter * NERDTree
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" when opening the same file it goes to the existing buffer remembering the cursor position, etc.
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif  
+
+
 
 """"" Ruby settings
 
-" .ru files are Ruby -- seems that it is not needed though...
+" .ru files are Ruby -- seems that it is not needed though... maybe because of vim-nox
 "au BufRead,BufNewFile *.ru setfiletype ruby
 
 " Disable automatic folding in vim-markdown
