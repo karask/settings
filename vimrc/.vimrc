@@ -64,7 +64,8 @@ set cursorline         " Underlines line that cursor is on
 """"" Mappings
 
 map <F2> :NERDTreeToggle<CR>
-inoremap <leader>, <C-X><C-O>
+inoremap <leader>, <C-N>
+inoremap <leader>. <C-X><C-O>
 
 
 

@@ -8,7 +8,12 @@ git_plugins = [
   "git://github.com/scrooloose/nerdtree.git",
 #  "git://github.com/vim-ruby/vim-ruby.git",
   "https://github.com/tpope/vim-haml",
-  "https://github.com/plasticboy/vim-markdown.git"
+  "https://github.com/plasticboy/vim-markdown.git",
+
+  "git://github.com/garbas/vim-snipmate.git",
+  "https://github.com/tomtom/tlib_vim.git",
+  "https://github.com/MarcWeber/vim-addon-mw-utils.git",
+  "https://github.com/honza/vim-snippets.git"
 ]
 
 
