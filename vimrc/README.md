@@ -3,9 +3,9 @@
 
 ## Then clone this git and
 
-> $ cp vimrc/.vimrc ~
+> $ cp settings/vimrc/.vimrc ~
 >
-> $ cp vimrc/update_plugins.rb ~/.vim/.
+> $ cp settings/vimrc/update_plugins.rb ~/.vim/.
 >
 > $ cd ~/.vim
 >
