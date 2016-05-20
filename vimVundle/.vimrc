@@ -6,13 +6,14 @@ filetype off                " no auto file recognition?
 set encoding=utf-8
 
 " line numbering
-"set nu
+set nu
+"set nonumber
 
 " set 256 colors in vim / assumes bash env of TERM=xterm-256color
 set t_Co=256
 
 " define leader key
-let mapleader='<space>'
+let mapleader=','
 
 " split navigations - use ctrl and navigation keys to move to a new window
 nnoremap <C-J> <C-W><C-J>
@@ -23,16 +24,15 @@ nnoremap <C-H> <C-W><C-H>
 " map F2 to toggle NERDTree
 map <F2> :NERDTreeToggle<CR>
 
-" map 
+" map autocomplete keys
 inoremap <leader>, <C-N>
-inoremap <leader>. <C-X><C-O>
-
+"inoremap <leader>. <C-X><C-O>
 
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
 " Enable folding with the spacebar (instead of za)
-nnoremap <space> za
+"nnoremap <space> za
 " Want to see docstrings for folded code?
 let g:SimpylFold_docstring_preview=1
 
