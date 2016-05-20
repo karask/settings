@@ -1,0 +1,14 @@
+https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/#vim-extensions
+
+* Get Vundle extension manager
+  $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+* Copy .vimrc
+  $ cp .vimrc  ~/
+
+* Search .vimrc for "TODO lines to check if something extra is required!
+
+* Then open vim and run: 
+  :PluginInstall
+
+
