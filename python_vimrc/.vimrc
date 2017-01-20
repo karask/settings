@@ -42,33 +42,25 @@ call vundle#begin()
 
 " Python Indentation
 au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix 
 
 " Other languages indentation
 au BufNewFile,BufRead *.rb, *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 
+
+"define BadWhitespace before using in a match
+highlight BadWhitespace ctermbg=red guibg=darkred
 
 " Flagging Uncecessary Whitespece
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
-" python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
-
 
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -87,6 +79,10 @@ Plugin 'vim-scripts/indentpython.vim'
 " Python Auto-complete
 Bundle 'Valloric/YouCompleteMe'
 "TODO requires compilation (https://github.com/Valloric/YouCompleteMe)
+
+" uses python binding from the first python in path (e.g. venv's!)
+let g:ycm_python_binary_path = 'python'
+
 " autoclose preview window
 let g:ycm_autoclose_preview_window_after_completion=1
 " go to definition
@@ -99,19 +95,6 @@ Plugin 'nvie/vim-flake8'
 " highlighting
 let python_highlight_all=1
 syntax on 
-
-" Color schemes
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-if has('gui_running')
-  set background=dark
-  colorscheme solarized
-else
-  "https://github.com/jnurmine/Zenburn
-  "TODO export TERM=xterm-256color / set t_Co=256 / $ cp
-  "~/.vim/bundle/Zenburn/colors/Zenburn.vim ~/.vim/colors/.
-  colorscheme zenburn
-endif
 
 " File manager -- NERDTree
 Plugin 'scrooloose/nerdtree'
