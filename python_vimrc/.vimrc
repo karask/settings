@@ -24,6 +24,9 @@ nnoremap <C-H> <C-W><C-H>
 " map F2 to toggle NERDTree
 map <F2> :NERDTreeToggle<CR>
 
+" close vim if the only window left open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " map autocomplete keys
 inoremap <leader>, <C-N>
 "inoremap <leader>. <C-X><C-O>
@@ -32,7 +35,7 @@ inoremap <leader>, <C-N>
 set foldmethod=indent
 set foldlevel=99
 " Enable folding with the spacebar (instead of za)
-"nnoremap <space> za
+nnoremap <space> za
 " Want to see docstrings for folded code?
 let g:SimpylFold_docstring_preview=1
 
