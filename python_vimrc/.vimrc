@@ -59,6 +59,10 @@ au BufNewFile,BufRead *.rb, *.js, *.html, *.css
     \ set softtabstop=2 |
     \ set shiftwidth=2 
 
+" add python debug breakpoint after line (,b) or before line (,B)
+au FileType python map <silent> <leader>b oimport pdb; pdb.set_trace()<esc>
+au FileType python map <silent> <leader>B Oimport pdb; pdb.set_trace()<esc>
+
 "define BadWhitespace before using in a match
 highlight BadWhitespace ctermbg=red guibg=darkred
 
@@ -111,6 +115,8 @@ Plugin 'kien/ctrlp.vim'
 " Power status bar for a lot of extra information
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
+" vim-go
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
