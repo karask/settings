@@ -1,0 +1,7 @@
+TODO
+
+cp i3/ to ~/.config/
+cp i3status/ to ~/.config/
+
+# beware of file ownership/privileges
+cp 90-touchpad.conf to /etc/X11/xorg.conf.d/
