@@ -6,6 +6,9 @@
 # Horizontal split is with "s" (like vim)
 # Moving between windows is done with arrow keys or with hjkl keys (like vim)
 
+Some shortcuts
+https://gist.github.com/MohamedAlaa/2961058
+
 Great example of script to setup tmux work environment
 https://gist.github.com/todgru/6224848
 
