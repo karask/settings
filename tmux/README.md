@@ -1,8 +1,15 @@
 
-## tmux Command is C-a
+# Changed commands:
 
-## Vertical split is with "v" (like vim)
+# tmux Command is C-a
+# Vertical split is with "v" (like vim)
+# Horizontal split is with "s" (like vim)
+# Moving between windows is done with arrow keys or with hjkl keys (like vim)
 
-## Horizontal split is with "s" (like vim)
 
-## Moving between windows is with hjkl keys (like vim)
+To predefine sessions we can run several commands at once:
+https://stackoverflow.com/questions/5609192/how-to-set-up-tmux-so-that-it-starts-up-with-specified-windows-opened
+
+
+To check if session exists so as to attach:
+https://superuser.com/questions/440015/restore-tmux-session-after-reboot
