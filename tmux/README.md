@@ -6,6 +6,9 @@
 # Horizontal split is with "s" (like vim)
 # Moving between windows is done with arrow keys or with hjkl keys (like vim)
 
+Introduction (plus link for themes and more)
+https://medium.com/hackernoon/a-gentle-introduction-to-tmux-8d784c404340
+
 Some shortcuts
 https://gist.github.com/MohamedAlaa/2961058
 
