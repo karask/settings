@@ -12,3 +12,11 @@ https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/#vim-ex
   :PluginInstall
 
 
+-------------------------------------------
+* Install powerline (useful for other "programs" like tmux, i3
+  $ pip install --user powerline-status psutil
+
+* Add/export $(python -m site --user-base) path to PATH
+
+* Install powerline fonts with:
+  $sudo apt-get install fonts-powerline
