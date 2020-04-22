@@ -6,6 +6,12 @@
 # Horizontal split is with "s" (like vim)
 # Moving between windows is done with arrow keys or with hjkl keys (like vim)
 
+# COPY tmux config
+cp .tmux.conf ~
+
+# COPY tmux tmux config
+cp -a powerline/ to ~/.config/
+
 Introduction (plus link for themes and more)
 https://medium.com/hackernoon/a-gentle-introduction-to-tmux-8d784c404340
 
