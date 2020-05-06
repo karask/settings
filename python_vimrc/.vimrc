@@ -122,5 +122,6 @@ Plugin 'fatih/vim-go'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
+" Set dark background - seems to be needed from tmux to retain the same colors
+set background=dark
 
