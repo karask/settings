@@ -76,6 +76,7 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+" https://vimawesome.com/ to check out nice plugins
 
 " Improved folding
 Plugin 'tmhedberg/SimpylFold'
@@ -84,8 +85,8 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 
 " Python Auto-complete
-Bundle 'Valloric/YouCompleteMe'
-"TODO requires compilation (https://github.com/Valloric/YouCompleteMe)
+Plugin 'valloric/youcompleteme'
+"TODO requires compilation (https://github.com/ycm-core/YouCompleteMe#installation)
 
 " uses python binding from the first python in path (e.g. venv's!)
 let g:ycm_python_binary_path = 'python'
@@ -117,6 +118,9 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " vim-go
 Plugin 'fatih/vim-go'
+
+" vim-solidity
+Plugin 'tomlion/vim-solidity'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
