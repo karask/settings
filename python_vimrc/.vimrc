@@ -101,8 +101,8 @@ Plugin 'scrooloose/syntastic'
 " python PEP8 checking
 Plugin 'nvie/vim-flake8'
 " highlighting
-let python_highlight_all=1
-syntax on 
+"let python_highlight_all=1
+"syntax on 
 
 " File manager -- NERDTree
 Plugin 'scrooloose/nerdtree'
@@ -120,7 +120,7 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'fatih/vim-go'
 
 " vim-solidity
-Plugin 'tomlion/vim-solidity'
+Plugin 'TovarishFin/vim-solidity'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
