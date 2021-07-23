@@ -27,6 +27,9 @@ map <F2> :NERDTreeToggle<CR>
 " close vim if the only window left open is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" command in normal mode to open a terminal when programming;  :Term
+command T :rightbelow :terminal ++rows=15
+
 " map autocomplete keys
 inoremap <leader>, <C-N>
 "inoremap <leader>. <C-X><C-O>
@@ -89,7 +92,7 @@ Plugin 'valloric/youcompleteme'
 "TODO requires compilation (https://github.com/ycm-core/YouCompleteMe#installation)
 
 " uses python binding from the first python in path (e.g. venv's!)
-let g:ycm_python_binary_path = 'python'
+let g:ycm_python_binary_path = 'python3'
 
 " autoclose preview window
 let g:ycm_autoclose_preview_window_after_completion=1
