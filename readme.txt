@@ -5,7 +5,7 @@
 - Install Zim Desktop wiki and point to dropbox's TechNotesCreate directories:
 
 Create dir:
-~/work		(all repos go here, incl. 'settings', 'programs', 'bitcoin-textbook' !!)
+~/repos		(all repos go here, incl. 'settings', 'programs', 'bitcoin-textbook' !!)
 ~/local/bin	(copy all scripts here, like todo.sh for tmux, etc. - include to $PATH)
 ~/local/lib	(create and just install all non-packaged software here)
 
