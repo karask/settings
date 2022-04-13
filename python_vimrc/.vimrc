@@ -29,7 +29,7 @@ map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " command in normal mode to open a terminal when programming;  :Term
-"command T :rightbelow :terminal ++rows=15
+command T :rightbelow :terminal ++rows=15
 
 
 " Python Indentation
@@ -57,7 +57,6 @@ au FileType python map <silent> <leader>B Oimport pdb; pdb.set_trace()<esc>
 
 " Flagging Uncecessary Whitespece
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
 
 " highlighting
 "let python_highlight_all=1
@@ -98,17 +97,17 @@ let g:SimpylFold_docstring_preview=1
 " python PEP8 checking
 Plugin 'nvie/vim-flake8'
 
+" Search anything Vim with ctrl-p
+Plugin 'kien/ctrlp.vim'
+
+" Git integration
+Plugin 'tpope/vim-fugitive'
+
 " syntax checking on exit
 "Plugin 'scrooloose/syntastic'
 
 " Improved Python Indentation
 "Plugin 'vim-scripts/indentpython.vim'
-
-" Search anything Vim with ctrl-p
-"Plugin 'kien/ctrlp.vim'
-
-" Git integration
-"Plugin 'tpope/vim-fugitive'
 
 " Power status bar for a lot of extra information
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
