@@ -10,7 +10,6 @@ Add to .bashrc
 ***
 alias bc='bc -l'
 alias l='ls -ltr'
-alias tmux='TERM=xterm-256color tmux'
 
 export PATH=$HOME/local/bin:$PATH
 ***

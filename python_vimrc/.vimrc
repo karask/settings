@@ -1,4 +1,5 @@
 """"" Default Vim settings
+
 set nocompatible            " use vim only
 filetype off                " no auto file recognition?
 
@@ -6,8 +7,8 @@ filetype off                " no auto file recognition?
 set encoding=utf-8
 
 " line numbering
-set nu
-"set nonumber
+set number
+"set nonumber or set nonu
 
 " set 256 colors in vim / assumes bash env of TERM=xterm-256color
 set t_Co=256
@@ -28,23 +29,8 @@ map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " command in normal mode to open a terminal when programming;  :Term
-command T :rightbelow :terminal ++rows=15
+"command T :rightbelow :terminal ++rows=15
 
-" map autocomplete keys
-inoremap <leader>, <C-N>
-"inoremap <leader>. <C-X><C-O>
-
-" Enable folding
-set foldmethod=indent
-set foldlevel=99
-" Enable folding with the spacebar (instead of za)
-nnoremap <space> za
-" Want to see docstrings for folded code?
-let g:SimpylFold_docstring_preview=1
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
 " Python Indentation
 au BufNewFile,BufRead *.py
@@ -67,63 +53,68 @@ au FileType python map <silent> <leader>b oimport pdb; pdb.set_trace()<esc>
 au FileType python map <silent> <leader>B Oimport pdb; pdb.set_trace()<esc>
 
 "define BadWhitespace before using in a match
-highlight BadWhitespace ctermbg=red guibg=darkred
+"highlight BadWhitespace ctermbg=red guibg=darkred
 
 " Flagging Uncecessary Whitespece
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
-" https://vimawesome.com/ to check out nice plugins
-
-" Improved folding
-Plugin 'tmhedberg/SimpylFold'
-
-" Improved Python Indentation
-Plugin 'vim-scripts/indentpython.vim'
-
-" Python Auto-complete
-Plugin 'valloric/youcompleteme'
-"TODO requires compilation (https://github.com/ycm-core/YouCompleteMe#installation)
-
-" uses python binding from the first python in path (e.g. venv's!)
-let g:ycm_python_binary_path = 'python3'
-
-" autoclose preview window
-let g:ycm_autoclose_preview_window_after_completion=1
-" go to definition
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
-" syntax checking on exit
-Plugin 'scrooloose/syntastic'
-" python PEP8 checking
-Plugin 'nvie/vim-flake8'
 " highlighting
 "let python_highlight_all=1
 "syntax on 
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+" https://vimawesome.com/ to check out nice plugins
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
 " File manager -- NERDTree
 Plugin 'scrooloose/nerdtree'
 
+" Autocompletion with jedi
+Plugin 'davidhalter/jedi-vim'
+"TODO need to install jedi for OS; apt install vim-python-jedi
+" map autocomplete keys
+inoremap <leader>, <C-N>
+"inoremap <leader>. <C-X><C-O> 
+
+" Improved folding
+Plugin 'tmhedberg/SimpylFold'
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+" Enable folding with the spacebar (instead of za)
+nnoremap <space> za
+" Want to see docstrings for folded code?
+let g:SimpylFold_docstring_preview=1
+
+" python PEP8 checking
+Plugin 'nvie/vim-flake8'
+
+" syntax checking on exit
+"Plugin 'scrooloose/syntastic'
+
+" Improved Python Indentation
+"Plugin 'vim-scripts/indentpython.vim'
+
 " Search anything Vim with ctrl-p
-Plugin 'kien/ctrlp.vim'
+"Plugin 'kien/ctrlp.vim'
 
 " Git integration
 "Plugin 'tpope/vim-fugitive'
 
 " Power status bar for a lot of extra information
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
-" vim-go
-Plugin 'fatih/vim-go'
+"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " vim-solidity
-Plugin 'TovarishFin/vim-solidity'
+"Plugin 'TovarishFin/vim-solidity'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
