@@ -5,3 +5,12 @@ Create dir:
 ~/local/bin	(copy all scripts here, like todo.sh for tmux, etc. - include to $PATH)
 ~/local/lib	(create and just install all non-packaged software here)
 
+
+Add to .bashrc
+***
+alias bc='bc -l'
+alias l='ls -ltr'
+alias tmux='TERM=xterm-256color tmux'
+
+export PATH=$HOME/local/bin:$PATH
+***
