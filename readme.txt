@@ -10,6 +10,7 @@ Add to .bashrc
 ***
 alias bc='bc -l'
 alias l='ls -ltr'
+alias gitcg="git log --all --decorate --oneline --graph"
 
 export PATH=$HOME/local/bin:$PATH
 ***
