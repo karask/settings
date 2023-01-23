@@ -3,6 +3,7 @@
 Create dir:
 ~/repos		(all repos go here, incl. 'settings', 'programs', 'bitcoin-textbook' !!)
 ~/local/bin	(copy all scripts here, like todo.sh for tmux, etc. - include to $PATH)
+                (also include AppImages, flatpacks here)
 ~/local/lib	(create and just install all non-packaged software here)
 
 
