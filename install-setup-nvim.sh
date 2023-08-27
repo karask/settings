@@ -43,11 +43,11 @@ fi
 
 # check if deb package neovim exists and install otherwise
 # TODO install to ~/.local/bin/ (or ~/.local/share/bin ??) 
-if [ ! -f "~/local/bin/nvim.appimage" ]
+if [ ! -f "~/.local/bin/nvim.appimage" ]
 then
     wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
     chmod +x nvim.appimage
-    mv nvim.appimage ~/local/bin
+    mv nvim.appimage ~/.local/bin
 else
     echo "neovim package found"
 fi
@@ -56,6 +56,14 @@ fi
 if [ $(dpkg-query -W -f='${Status}' git 2>/dev/null | grep -c "ok installed") -eq 0 ]
 then
     sudo apt-get install git
+else
+    echo "git package found"
+fi
+
+# also install npm if it does not exist (needed by pyright)
+if [ $(dpkg-query -W -f='${Status}' npm 2>/dev/null | grep -c "ok installed") -eq 0 ]
+then
+    sudo apt-get install npm
 else
     echo "git package found"
 fi
