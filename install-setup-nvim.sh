@@ -4,6 +4,7 @@ echo "The script will install and setup neovim. It will use the current director
 echo ""
 
 # check if wget is available
+echo Check if wget exists...
 if ! command -v wget &> /dev/null
 then
     echo "wget missing. Installing now..."
@@ -13,6 +14,7 @@ else
 fi
 
 # check if deb package ripgrep exists (no command to check as above)
+echo Check if ripgrep exists...
 if [ $(dpkg-query -W -f='${Status}' ripgrep 2>/dev/null | grep -c "ok installed") -eq 0 ]
 then
     sudo apt-get install ripgrep
@@ -21,6 +23,7 @@ else
 fi
 
 # nerd fonts
+echo Check if local share fonts exist...
 if [ ! -d ~/.local/share/fonts ]
 then
     echo "Directory '~/.local/share/fonts' does not exist. Will create."
@@ -29,6 +32,7 @@ else
     echo "Found ~/.fonts directory."
 fi
 
+echo Check if Nerd Fonts exist...
 FILE=~/.local/share/fonts/HackNerdFont-Regular.ttf
 if [ ! -f "$FILE" ]
 then
@@ -42,8 +46,8 @@ else
 fi
 
 # check if deb package neovim exists and install otherwise
-# TODO install to ~/.local/bin/ (or ~/.local/share/bin ??) 
-if [ ! -f "~/.local/bin/nvim.appimage" ]
+echo Check if nvim.appimage exists...
+if [ ! -f ~/.local/bin/nvim.appimage ]
 then
     wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
     chmod +x nvim.appimage
@@ -53,6 +57,7 @@ else
 fi
 
 # check if deb package git exists
+echo Check if git exists...
 if [ $(dpkg-query -W -f='${Status}' git 2>/dev/null | grep -c "ok installed") -eq 0 ]
 then
     sudo apt-get install git
@@ -61,14 +66,16 @@ else
 fi
 
 # also install npm if it does not exist (needed by pyright)
+echo Check if npm exists...
 if [ $(dpkg-query -W -f='${Status}' npm 2>/dev/null | grep -c "ok installed") -eq 0 ]
 then
     sudo apt-get install npm
 else
-    echo "git package found"
+    echo "npm package found"
 fi
 
 # install NvChad
+echo Installing NvChad from github into ~/.config/nvim/
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 
 echo 
