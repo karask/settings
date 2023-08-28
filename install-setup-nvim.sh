@@ -1,7 +1,8 @@
 #!/bin/bash
 
+echo 
 echo "The script will install and setup neovim. It will use the current directory for storing files. It will then clean after itself."
-echo ""
+echo
 
 # check if wget is available
 echo Check if wget exists...
@@ -12,6 +13,17 @@ then
 else
     echo "Found wget."
 fi
+
+
+# check if deb package git exists
+echo Check if git exists...
+if [ $(dpkg-query -W -f='${Status}' git 2>/dev/null | grep -c "ok installed") -eq 0 ]
+then
+    sudo apt-get install git
+else
+    echo "git package found"
+fi
+
 
 # check if deb package ripgrep exists (no command to check as above)
 echo Check if ripgrep exists...
@@ -29,7 +41,7 @@ then
     echo "Directory '~/.local/share/fonts' does not exist. Will create."
     mkdir ~/.local/share/fonts
 else
-    echo "Found ~/.fonts directory."
+    echo "Found ~/.local/share/fonts directory."
 fi
 
 echo Check if Nerd Fonts exist...
@@ -54,15 +66,6 @@ then
     mv nvim.appimage ~/.local/bin
 else
     echo "neovim package found"
-fi
-
-# check if deb package git exists
-echo Check if git exists...
-if [ $(dpkg-query -W -f='${Status}' git 2>/dev/null | grep -c "ok installed") -eq 0 ]
-then
-    sudo apt-get install git
-else
-    echo "git package found"
 fi
 
 # also install npm if it does not exist (needed by pyright)
