@@ -4,26 +4,6 @@ echo
 echo "The script will install and setup neovim. It will use the current directory for storing files. It will then clean after itself."
 echo
 
-# check if wget is available
-echo Check if wget exists...
-if ! command -v wget &> /dev/null
-then
-    echo "wget missing. Installing now..."
-    sudo apt install wget
-else
-    echo "Found wget."
-fi
-
-
-# check if deb package git exists
-echo Check if git exists...
-if [ $(dpkg-query -W -f='${Status}' git 2>/dev/null | grep -c "ok installed") -eq 0 ]
-then
-    sudo apt-get install git
-else
-    echo "git package found"
-fi
-
 
 # check if deb package ripgrep exists (no command to check as above)
 echo Check if ripgrep exists...
@@ -68,15 +48,7 @@ else
     echo "neovim package found"
 fi
 
-# also install npm if it does not exist (needed by pyright)
-echo Check if npm exists...
-if [ $(dpkg-query -W -f='${Status}' npm 2>/dev/null | grep -c "ok installed") -eq 0 ]
-then
-    sudo apt-get install npm
-else
-    echo "npm package found"
-fi
-
+#
 # install NvChad
 echo Installing NvChad from github into ~/.config/nvim/
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1

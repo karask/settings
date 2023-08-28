@@ -15,15 +15,6 @@ else
     echo "Found ~/repos directory."
 fi
 
-# check if deb package git exists
-echo Check if git exists...
-if [ $(dpkg-query -W -f='${Status}' git 2>/dev/null | grep -c "ok installed") -eq 0 ]
-then
-    sudo apt-get install git
-else
-    echo "git package found"
-fi
-
 
 # checkout github settings project
 echo Check if repo settings exist
