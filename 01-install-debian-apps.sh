@@ -4,4 +4,5 @@ echo
 echo Install useful and required debian apps
 echo 
 
-sudo apt install wget git npm
+sudo apt install wget git npm zim
+

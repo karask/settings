@@ -35,5 +35,10 @@ else
 fi
 
 echo Sourcing .tmux.conf and we are ready
-source ~/.tmux.conf
+tmux source ~/.tmux.conf
+
+echo
+echo Now start tmux (maybe with todo.sh script) and when inside do Alt-f + I to
+echo install plugins and Alt-f + r to refresh tmux with new config.
+echo
 

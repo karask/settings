@@ -1,3 +1,12 @@
+- setup git and bitbucket auth to connect
+- run 01-04 scripts to setup environments
+- install megasync (mega.io)
+- missing keepassxc (keepassxc.org)
+
+
+#####################################
+# OLD INSTRUCTIONS - before scripts #
+#####################################
 - Open a terminal (gnome-terminal) and change shortcut for zooming in from Ctrl-+ to Ctrl-=
 
 Create dir:
