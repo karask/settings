@@ -75,18 +75,19 @@ else
 fi
 
 echo 
-wget -P ~/ "https://github.com/karask/settings/raw/master/neovim/custom/plugins.lua"
-wget -P ~/ "https://github.com/karask/settings/raw/master/neovim/custom/chadrc.lua"
-wget -P ~/ "https://github.com/karask/settings/raw/master/neovim/custom/configs/lspconfig.lua"
-wget -P ~/ "https://github.com/karask/settings/raw/master/neovim/custom/configs/null-ls.lua"
+NVIM=~/.config/nvim/lua/custom
+wget -P $NVIM "https://github.com/karask/settings/raw/master/neovim/custom/plugins.lua"
+wget -P $NVIM "https://github.com/karask/settings/raw/master/neovim/custom/chadrc.lua"
+wget -P $NVIM/configs "https://github.com/karask/settings/raw/master/neovim/custom/configs/lspconfig.lua"
+wget -P $NVIM/configs "https://github.com/karask/settings/raw/master/neovim/custom/configs/null-ls.lua"
 echo nvim custom setup installed.
 
 echo 
 echo Neovim with NvChad config installed successfully. 
 echo
-echo You need to set the Hack Nerd Font in your terminal (konsole). Search for 'fonts' to find KDE fonts tool and change only 'Fixed Width' fonts
+echo "You need to set the Hack Nerd Font in your terminal (konsole). Search for 'fonts' to find KDE fonts tool and change only 'Fixed Width' fonts"
 echo
-echo Then exit the terminal, start a new one and run with: nvim.appimage (v is an alias)
+echo "Then exit the terminal, start a new one and run with: nvim.appimage (v is an alias)"
 echo
 echo To install python highlighting run :TSInstall python
 echo To install bash highlighting run :TSInstall bash
