@@ -1,7 +1,10 @@
 - setup git and bitbucket auth to connect
 - run 01-04 scripts to setup environments
+
+- Use nix or manually each one ...
+- install brave browser
 - install megasync (mega.io)
-- missing keepassxc (keepassxc.org)
+- install keepassxc (keepassxc.org)
 
 
 #####################################
