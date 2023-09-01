@@ -53,15 +53,46 @@ fi
 echo Installing NvChad from github into ~/.config/nvim/
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 
+echo Installing my custom nvim settings for python from settings.git
+echo
+echo Check if ~/.config/nvim/lua/custom exists...
+if [ ! -d ~/.config/nvim/lua/custom ]
+then
+    echo "Directory '~/.config/nvim/lua/custom' does not exist. Will create."
+    mkdir ~/.config/nvim/lua/custom
+else
+    echo "Found ~/.config/nvim/lua/custom directory."
+fi
+
+echo
+echo Check if ~/.config/nvim/lua/custom/configs exists...
+if [ ! -d ~/.config/nvim/lua/custom/configs ]
+then
+    echo "Directory '~/.config/nvim/lua/custom/configs' does not exist. Will create."
+    mkdir ~/.config/nvim/lua/custom/configs
+else
+    echo "Found ~/.config/nvim/lua/custom/configs directory."
+fi
+
+echo 
+wget -P ~/ "https://github.com/karask/settings/raw/master/neovim/custom/plugins.lua"
+wget -P ~/ "https://github.com/karask/settings/raw/master/neovim/custom/chadrc.lua"
+wget -P ~/ "https://github.com/karask/settings/raw/master/neovim/custom/configs/lspconfig.lua"
+wget -P ~/ "https://github.com/karask/settings/raw/master/neovim/custom/configs/null-ls.lua"
+echo nvim custom setup installed.
+
 echo 
 echo Neovim with NvChad config installed successfully. 
 echo
-echo You need to set the Hack Nerd Font in your terminal (konsole). Search for 'fonts' and change only 'Fixed Width' fonts
+echo You need to set the Hack Nerd Font in your terminal (konsole). Search for 'fonts' to find KDE fonts tool and change only 'Fixed Width' fonts
 echo
-echo Then exit the terminal, start a new one and run with: nvim.appimage
+echo Then exit the terminal, start a new one and run with: nvim.appimage (v is an alias)
 echo
 echo To install python highlighting run :TSInstall python
 echo To install bash highlighting run :TSInstall bash
+echo 
+echo To install all mason plugins run :MasonInstallAll
+echo
 echo For instructions of a full python IDE: https://www.youtube.com/watch?v=4BnVeOUeZxc
 echo 
 
