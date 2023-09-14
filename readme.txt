@@ -1,11 +1,12 @@
 - Install using nix or manually:
   . install brave browser
-  . install megasync (mega.io)
   . install keepassxc (keepassxc.org)
+  . install megasync (mega.io)
+  . get gpg key and insert to machine (pass is ready but requires mega)
 
 - setup git and bitbucket auth to connect
 
-- run 01-04 scripts to setup environments
+- run 00-05, 10 scripts to setup environments
 
 
 
