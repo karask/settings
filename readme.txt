@@ -4,9 +4,7 @@
   . install megasync (mega.io)
   . get gpg key and insert to machine (pass is ready but requires mega)
 
-- setup git and bitbucket auth to connect
-
-- run 00-05, 10 scripts to setup environments
+- run 00-05 scripts to setup environments
 
 
 
