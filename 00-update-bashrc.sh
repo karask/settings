@@ -10,5 +10,6 @@ alias v='nvim.appimage'
 # my init paths
 export PATH=$HOME/.local/bin:$PATH
 export PASSWORD_STORE_DIR=~/MEGAsync/mine/mine/.password-store/
+export EDITOR=v
 
 EOF
