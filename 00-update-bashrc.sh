@@ -1,3 +1,6 @@
+#!/bin/bash
+
+# terminal configuration
 cat << 'EOF' >> ~/.bashrc
 
 # set note taking shortcuts
