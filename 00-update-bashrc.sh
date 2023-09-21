@@ -4,11 +4,32 @@
 cat << 'EOF' >> ~/.bashrc
 
 # set note taking shortcuts
-n() { $EDITOR ~/MEGAsync/mine/.notes/"$*"; }
-nls() { ls -tr  ~/MEGAsync/mine/.notes/ | grep "$*"; }
-nr() { rm ~/MEGAsync/mine/.notes/"$*"; }
-ns() { grep -C 5 "$*" ~/MEGAsync/mine/.notes/*; }
-nv() { cat ~/MEGAsync/mine/.notes/"$*"; }
+export NOTESDIR=~/MEGAsync/mine/.notes/
+n() { $EDITOR $NOTESDIR/"$*"; }
+nls() { ls -tr  $NOTESDIR/ | grep "$*"; }
+nr() { rm $NOTESDIR/"$*"; }
+ns() { grep -C 5 "$*" $NOTESDIR/*; }
+nv() { cat $NOTESDIR/"$*"; }
+# set n autocomplete
+_notes()
+{
+  local notes_dir=$NOTESDIR
+  local cmd=$1 cur=$2 pre=$3
+  local arr i file
+
+  arr=( $( cd "$NOTESDIR" && compgen -f -- "$cur") )
+  COMPREPLY=()
+  for ((i = 0; i < ${#arr[@]}; ++i)); do 
+    file=${arr[i]}
+    if [[ -d $NOTESDIR/$file ]]; then
+      file=$file/
+    fi
+    COMPREPLY[i]=$file
+  done
+}
+complete -F _notes -o nospace n
+complete -F _notes -o nospace nr
+complete -F _notes -o nospace nv
 
 # my aliases
 alias bc='bc -l'
