@@ -1,10 +1,10 @@
 - Install using nix or manually:
-  . install brave browser
+  . install thorium browser
   . install keepassxc (keepassxc.org)
   . install megasync (mega.io)
   . get gpg key and insert to machine (pass is ready but requires mega)
 
-- run 00-05 scripts to setup environments
+- run 00-06 scripts to setup environment
 
 
 
