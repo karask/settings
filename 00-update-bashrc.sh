@@ -4,7 +4,7 @@
 cat << 'EOF' >> ~/.bashrc
 
 # set note taking shortcuts
-export NOTESDIR=~/MEGAsync/mine/.notes/
+export NOTESDIR=~/MEGAsync/mine/notes/
 n() { $EDITOR $NOTESDIR/"$*"; }
 nls() { ls -tr  $NOTESDIR/ | grep "$*"; }
 nr() { rm $NOTESDIR/"$*"; }
