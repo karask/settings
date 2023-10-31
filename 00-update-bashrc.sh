@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir ~/.local/bin
+
 # terminal configuration
 cat << 'EOF' >> ~/.bashrc
 
