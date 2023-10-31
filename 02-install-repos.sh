@@ -22,7 +22,7 @@ if [ ! -d ~/repos/settings ]
 then
     echo "Directory '~/repos/settings' does not exist. Will create."
     echo "Cloning settings from github"
-    git clone https://github.com/karask/settings.git ~/repos/
+    git clone https://github.com/karask/settings.git ~/repos/settings
 else
     echo "Found ~/repos/settings directory."
 fi
@@ -34,7 +34,7 @@ if [ ! -d ~/repos/python-bitcoin-utils ]
 then
     echo "Directory '~/repos/python-bitcoin-utils' does not exist. Will create."
     echo "Cloning python-bitcoin-utils from github"
-    git clone https://github.com/karask/python-bitcoin-utils.git ~/repos/
+    git clone https://github.com/karask/python-bitcoin-utils.git ~/repos/python-bitcoin-utils
 else
     echo "Found ~/repos/python-bitcoin-utils directory."
 fi
@@ -46,7 +46,7 @@ if [ ! -d ~/repos/bitcoin-textbook ]
 then
     echo "Directory '~/repos/bitcoin-textbook' does not exist. Will create."
     echo "Cloning bitcoin-textbook from github"
-    git clone https://github.com/karask/bitcoin-textbook.git ~/repos/
+    git clone https://github.com/karask/bitcoin-textbook.git ~/repos/bitcoin-textbook
 else
     echo "Found ~/repos/bitcoin-textbook directory."
 fi
@@ -58,7 +58,7 @@ if [ ! -d ~/repos/karask.github.io ]
 then
     echo "Directory '~/repos/karask.github.io' does not exist. Will create."
     echo "Cloning karask.github.io from github"
-    git clone https://github.com/karask/karask.github.io.git ~/repos/
+    git clone https://github.com/karask/karask.github.io.git ~/repos/karask.github.io
 else
     echo "Found ~/repos/karask.github.io directory."
 fi
@@ -70,7 +70,7 @@ if [ ! -d ~/repos/satoshi-paper ]
 then
     echo "Directory '~/repos/satoshi-paper' does not exist. Will create."
     echo "Cloning satoshi-paper from github"
-    git clone https://github.com/karask/satoshi-paper.git ~/repos/
+    git clone https://github.com/karask/satoshi-paper.git ~/repos/satoshi-paper
 else
     echo "Found ~/repos/satoshi-paper directory."
 fi
@@ -82,19 +82,7 @@ if [ ! -d ~/repos/bitcoin-notes ]
 then
     echo "Directory '~/repos/bitcoin-notes' does not exist. Will create."
     echo "Cloning bitcoin-notes from github"
-    git clone https://github.com/karask/bitcoin-notes.git ~/repos/
-else
-    echo "Found ~/repos/bitcoin-notes directory."
-fi
-
-
-# checkout github bitcoin-notes project
-echo Check if repo bitcoin-notes exist
-if [ ! -d ~/repos/bitcoin-notes ]
-then
-    echo "Directory '~/repos/bitcoin-notes' does not exist. Will create."
-    echo "Cloning bitcoin-notes from github"
-    git clone https://github.com/karask/bitcoin-notes.git ~/repos/
+    git clone https://github.com/karask/bitcoin-notes.git ~/repos/bitcoin-notes
 else
     echo "Found ~/repos/bitcoin-notes directory."
 fi
@@ -106,20 +94,21 @@ if [ ! -d ~/repos/fantasy-d100 ]
 then
     echo "Directory '~/repos/fantasy-d100' does not exist. Will create."
     echo "Cloning fantasy-d100 from github"
-    git clone https://github.com/karask/fantasy-d100.git ~/repos/
+    git clone https://github.com/karask/fantasy-d100.git ~/repos/fantasy-d100
 else
     echo "Found ~/repos/fantasy-d100 directory."
 fi
 
 
 # checkout bitbucket programs project
-echo Check if repo programs exist
-if [ ! -d ~/repos/programs ]
-then
-    echo "Directory '~/repos/programs' does not exist. Will create."
-    echo "Cloning programs from bitbucket"
-    git clone https://karask@bitbucket.org/programs.git ~/repos/
-else
-    echo "Found ~/repos/programs directory."
-fi
+# TODO MOVE programs to private github repository
+#echo Check if repo programs exist
+#if [ ! -d ~/repos/programs ]
+#then
+#    echo "Directory '~/repos/programs' does not exist. Will create."
+#    echo "Cloning programs from bitbucket"
+#    git clone https://karask@bitbucket.org/programs.git ~/repos/programs
+#else
+#    echo "Found ~/repos/programs directory."
+#fi
 
