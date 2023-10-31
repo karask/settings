@@ -87,7 +87,8 @@ echo Neovim with NvChad config installed successfully.
 echo
 echo "You need to set the Hack Nerd Font in your terminal (konsole). Search for 'fonts' to find KDE fonts tool and change only 'Fixed Width' fonts"
 echo
-echo "Then exit the terminal, start a new one and run with: nvim.appimage (v is an alias)"
+echo "Then exit the terminal, start a new one and run with: nvim.appimage (e is an alias)"
+echo "For Gnome terminal go to settings and change 'Custom font:' "
 echo
 echo To install python highlighting run :TSInstall python
 echo To install bash highlighting run :TSInstall bash
