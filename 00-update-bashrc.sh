@@ -1,10 +1,12 @@
 #!/bin/bash
 
+mkdir ~/.local/bin
+
 # terminal configuration
 cat << 'EOF' >> ~/.bashrc
 
 # set note taking shortcuts
-export NOTESDIR=~/MEGAsync/mine/.notes/
+export NOTESDIR=~/MEGAsync/mine/notes/
 n() { $EDITOR $NOTESDIR/"$*"; }
 nls() { ls -tr  $NOTESDIR/ | grep "$*"; }
 nr() { rm $NOTESDIR/"$*"; }
@@ -41,7 +43,7 @@ alias v='okular'
 
 # my init paths
 export PATH=$HOME/.local/bin:$PATH
-export PASSWORD_STORE_DIR=~/MEGAsync/mine/mine/.password-store/
+export PASSWORD_STORE_DIR=~/MEGAsync/mine/mine/password-store/
 export EDITOR=nvim.appimage
 
 EOF
