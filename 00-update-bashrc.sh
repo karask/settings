@@ -5,6 +5,10 @@ mkdir ~/.local/bin
 # terminal configuration
 cat << 'EOF' >> ~/.bashrc
 
+# set hex to decimal to hex utils
+h2d() { echo "ibase=16; $@" | bc; }
+d2h() { echo "obase=16; $@" | bc; }
+
 # set note taking shortcuts
 export NOTESDIR=~/MEGAsync/mine/notes/
 n() { $EDITOR $NOTESDIR/"$*"; }
