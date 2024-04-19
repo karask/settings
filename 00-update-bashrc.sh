@@ -42,8 +42,8 @@ alias bc='bc -l'
 alias l='ls -ltr'
 alias bit='bitcoin-cli'
 alias gitcg="git log --all --decorate --oneline --graph"
-alias e='nvim.appimage'
-alias v='okular'
+alias v='nvim.appimage'
+alias o='okular'
 
 # my init paths
 export PATH=$HOME/.local/bin:$PATH
