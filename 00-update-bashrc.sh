@@ -37,8 +37,10 @@ complete -F _notes -o nospace n
 complete -F _notes -o nospace nr
 complete -F _notes -o nospace nv
 
+# set m function for simple math using bc -l
+m() { echo "$*" | bc -l; }
+
 # my aliases
-alias bc='bc -l'
 alias l='ls -ltr'
 alias bit='bitcoin-cli'
 alias gitcg="git log --all --decorate --oneline --graph"
