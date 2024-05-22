@@ -14,7 +14,7 @@ export NOTESDIR=~/MEGAsync/mine/notes/
 n() { $EDITOR $NOTESDIR/"$*"; }
 nls() { ls -tr  $NOTESDIR/ | grep "$*"; }
 nr() { rm $NOTESDIR/"$*"; }
-ns() { grep -C 5 "$*" $NOTESDIR/*; }
+ns() { grep -i -C 5 "$*" $NOTESDIR/*; }
 nv() { cat $NOTESDIR/"$*"; }
 # set n autocomplete
 _notes()
