@@ -3,7 +3,7 @@
   . install keepassxc (keepassxc.org)
   . install megasync (mega.io)
   . get gpg key and insert to machine (need to edit trust and expiry - ss pw + key two)
-    . pass is ready but requires mega
+    . install apps (incl. pass) with 01 script -- pass requires mega
 
 - run 00-06 scripts to setup environment
 
