@@ -2,7 +2,7 @@
   . install thorium browser
   . install keepassxc (keepassxc.org)
   . install megasync (mega.io)
-  . get gpg key and insert to machine (need to edit trust and expiry - ss pw + key one)
+  . get gpg key and insert to machine (need to edit trust and expiry - ss pw + key two)
     . pass is ready but requires mega
 
 - run 00-06 scripts to setup environment
